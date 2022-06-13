@@ -1,0 +1,149 @@
+.productContent {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  margin: 0px auto;
+  width: 1200px;
+
+  flex-flow: row wrap;
+}
+
+.productCard {
+  background: #ffffff;
+
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  position: relative;
+  display: inline-block;
+  width: 170px;
+  margin: 10px 10px 0 10px;
+  height: 310px;
+}
+
+.productContent .productCard .productImage {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.productContent .productCard .productImage img {
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.productContent .productCard:hover .productImage {
+  cursor: pointer;
+}
+
+.productContent .productName {
+  font-size: 15px;
+
+  font-family: "Poppins", sans-serif;
+}
+.productContent .productName h3 {
+  margin: 0 0 0 5px;
+  font-size: 15px;
+  line-height: 1.5;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  color: #333;
+}
+.price {
+  margin: 0 0 0 5px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 999;
+  font-size: 16px;
+  color: rgb(81, 91, 93);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+}
+.productContent .price .priceBeforDiscount {
+  margin: 0 0 0 5px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+  display: flex;
+
+  font-family: SourceSansPro, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-align: right;
+}
+.productContent .price .Discount:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  color: rgb(73, 71, 69);
+  width: 100%;
+  pointer-events: none;
+  top: calc(50% - 2px);
+  height: 2px;
+  border-top: 2px solid;
+}
+
+.productContent .price .priceAfterDiscount {
+  margin: 0 0 0 5px;
+
+  color: rgb(223, 0, 0);
+  font-family: "SourceSansPro", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+.Discount {
+  position: relative;
+  display: flex;
+  color: #9b9b9b;
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+.afterDiscount .currency {
+  color: rgb(223, 0, 0);
+  font-family: "SourceSansPro", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+.Action {
+  position: absolute;
+
+  right: 10px;
+}
+.Action li {
+  position: relative;
+  list-style-type: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  transform: translateX(60px);
+  transition: transform 0.5s;
+}
+.productContent .productCard:hover .Action li {
+  transform: translateX(0px);
+}
+.Action li:hover {
+  background-color: #0284c7 !important;
+  color: #f0f9ff;
+}
